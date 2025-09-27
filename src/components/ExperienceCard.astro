@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string;
+  metrics: Array<{
+    label: string;
+    percentage: number;
+  }>;
+  buttonText?: string;
+}
+
+const { title, metrics, buttonText = "Check it out the Project"} = Astro.props;
+---
+
+<div 
+  class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] border border-[#404040] rounded-xl  md:p-5 relative shadow-xl backdrop-blur-lg text-white"
+>
+  <div class="pt-4">
+    <h3 
+      class="text-lg md:text-base font-bold mb-4 font-lato bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent"
+      style="font-family: var(--font-lato);"
+    >
+      {title}
+    </h3>
+    
+    <div class="flex flex-col gap-3 mb-6">
+      {metrics.map((metric) => (
+        <div class="flex items-center justify-between gap-4 md:flex-col md:items-start md:gap-2">
+          <span 
+            class="font-roboto-mono text-sm font-medium text-gray-200 min-w-[180px] text-left md:min-w-0 md:mb-1"
+            style="font-family: var(--font-roboto-mono);"
+          >
+            {metric.label}
+          </span>
+          <div class="flex items-center gap-3 flex-1 w-full">
+            <div class="flex-1 h-1.5 bg-[#404040] rounded overflow-hidden relative">
+              <div 
+                class="h-full rounded bg-gradient-to-r from-[#8b5cf6] via-[#7c3aed] to-[#5b21b6] transition-all duration-800 ease-in-out relative"
+                style={`width: ${metric.percentage}%;`}
+              >
+                <span 
+                  class="absolute top-0 right-0 w-0.5 h-full bg-white/80 shadow-[0_0_8px_0_rgba(255,255,255,0.6)]"
+                ></span>
+              </div>
+            </div>
+            <span 
+              class="font-roboto-mono text-sm font-bold text-white min-w-[40px] text-right"
+              style="font-family: var(--font-roboto-mono);"
+            >
+              {metric.percentage}%
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    {buttonText && (
+      <button
+        class="bg-transparent border-2 border-[#8b5cf6] text-[#8b5cf6] px-4 py-2 rounded-lg font-roboto-mono text-sm font-semibold cursor-pointer transition-all duration-300 block mx-auto hover:bg-[#8b5cf6] hover:text-white hover:shadow-lg hover:-translate-y-0.5 hover:shadow-[#8b5cf6]/30"
+        style="font-family: var(--font-roboto-mono);"
+      >
+        {buttonText}
+      </button>
+    )}
+  </div>
+</div>

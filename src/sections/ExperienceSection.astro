@@ -1,0 +1,87 @@
+---
+import ExperienceCard from '../components/ExperienceCard.astro';
+const metrics = [
+    {
+        label: "Reduction in order-to-invoice cycle time",
+        percentage: 48
+    },
+    {
+        label: "Increase in cash collection efficiency",
+        percentage: 38
+    },
+    {
+        label: "Increase in cash collection efficiency",
+        percentage: 25
+    },
+    {
+        label: "DAU among field users",
+        percentage: 85
+    }
+]
+
+const experienceData = {
+    title: "Offline-first Sales & ERP Sync",
+    metrics: metrics,
+    buttonText: "Check it out the Project",
+}
+
+---
+<div class="flex items-center justify-between min-h-screen px-10">
+    <div class="flex flex-col w-[60%] mx-10 ">
+        <h1 class="font-lato text-2xl md:text-2xl font-bold">Offline-first Sales & ERP Sync</h1>
+        <p class="font-roboto-mono text-md md:text-md mr-20 mt-2">
+            Built an offline-first sales app integrated with the company ERP to enable order capture, cash collections, invoicing, delivery tracking, and on-device inventory/AR management for multi-account customers, syncing reliably when online.
+        </p>
+        <p class="font-roboto-mono text-md md:text-md mr-20 mt-4">
+            As a junior developer at the company where I worked (Setca Soft), we achieved this together with the team.        
+        </p>
+        <div class="mt-6 justify-start items-start">
+        <ExperienceCard
+            title={experienceData.title}
+            metrics={experienceData.metrics}
+            buttonText={experienceData.buttonText}
+        />  
+        </div>
+    </div>
+    <div class="flex flex-col w-[40%] justify-center items-center ">
+        <h1 class="font-roboto-mono text-3xl md:text-3xl font-bold">IMPACT-LED</h1>
+        <h2 class="font-ibrand fake-bold tracking-widest text-[4rem] md:text-[4rem] font-bold uppercase"><strong>EXPERIENCE</strong></h2>
+        
+        <!-- Información adicional del proyecto -->
+        <div class="mt-8 text-center">
+            <div class="bg-gradient-to-r from-[#8b5cf6]/20 to-[#5b21b6]/20 rounded-lg p-4 backdrop-blur-sm border border-[#8b5cf6]/30">
+                <p class="font-roboto-mono text-sm text-gray-300 mb-2">Technologies Used</p>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span class="px-3 py-1 bg-[#8b5cf6]/20 rounded-full text-xs font-roboto-mono text-[#8b5cf6] border border-[#8b5cf6]/40">Flutter</span>
+                    <span class="px-3 py-1 bg-[#8b5cf6]/20 rounded-full text-xs font-roboto-mono text-[#8b5cf6] border border-[#8b5cf6]/40">SQLite</span>
+                    <span class="px-3 py-1 bg-[#8b5cf6]/20 rounded-full text-xs font-roboto-mono text-[#8b5cf6] border border-[#8b5cf6]/40">REST API</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 grid grid-cols-2 gap-4 text-center">
+                <div class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-lg p-3 border border-[#404040]">
+                    <p class="text-2xl font-bold text-[#8b5cf6] font-roboto-mono">2023</p>
+                    <p class="text-xs text-gray-400 font-roboto-mono">Year</p>
+                </div>
+                <div class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-lg p-3 border border-[#404040]">
+                    <p class="text-2xl font-bold text-[#8b5cf6] font-roboto-mono">15mo</p>
+                    <p class="text-xs text-gray-400 font-roboto-mono">Duration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+
+    .font-ibrand {
+        font-family: "Ibrand", var(--font-sans);
+        font-weight: 500;
+    }
+
+    .font-sink {
+        font-family: "Sink", var(--font-sans);
+    }
+</style>
