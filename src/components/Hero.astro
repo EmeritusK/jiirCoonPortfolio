@@ -1,0 +1,60 @@
+---
+import ServicesCarousel from './ServicesCarousel.astro';
+---
+
+<div class="min-h-screen flex flex-col px-8 py-16 gap-2">
+    <div class="flex flex-col mx-65">
+        <h1
+            class="font-ibrand text-6xl md:text-8xl font-bold text-white leading-tight mb-4 self-start"
+        >
+            Real Life
+        </h1>
+        <h2
+            class="font-ibrand fake-bold text-6xl md:text-8xl font-bold text-white leading-tight mb-4 self-end"
+        >
+            Digital Crafter
+        </h2>
+    </div>
+    <div class="flex flex-col w-[35%] mx-2">
+        <p
+            class="font-roboto-mono text-md md:text-lg text-gray-300 mb-3 max-w-2xl leading-relaxed"
+        >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.
+        </p>
+    </div>
+    <div class="flex w-fit mx-2 gap-4">
+        <button
+            class="font-ibrand bg-white text-black px-6 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition-all duration-300 cursor-pointer"
+        >
+            Check Projects
+        </button>
+        <button
+            class="font-ibrand border-2 border-white text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 hover:text-black transition-all duration-300 cursor-pointer"
+        >
+            Contact Me
+        </button>
+    </div>
+    <div class="flex flex-col w-full justify-center items-center mx-2 mt-2">
+        <p
+        class="font-roboto-mono text-sm md:text-md text-gray-300 max-w-2xl leading-relaxed"
+      >
+        Clean <span class="font-bold">build</span>. Real <span class="font-bold">impact</span>.
+      </p>
+    </div>
+     <div class="mt-4">
+         <ServicesCarousel />
+     </div>
+</div>
+
+<style>
+    .font-ibrand {
+        font-family: "Ibrand", var(--font-sans);
+        font-weight: 500;
+    }
+
+    .font-sink {
+        font-family: "Sink", var(--font-sans);
+    }
+</style>
