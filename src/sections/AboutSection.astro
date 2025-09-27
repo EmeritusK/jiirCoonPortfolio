@@ -1,0 +1,55 @@
+---
+import TechnologiesCarousel from "../components/layout/TechnologyCarousel.astro";
+---
+
+<div class="flex gap-2 relative overflow-visible justify-center">
+    <div class="flex flex-col items-start justify-center my-30">
+        <div class="flex flex-col">
+            <h1
+                class="font-ibrand text-9xl font-bold fake-bold text-white mb-[-15px]"
+            >
+                Here is
+            </h1>
+            <p
+                class="font-roboto-mono text-3xl md:text-3xl text-gray-300 max-w-2xl leading-relaxed"
+            >
+                Something about me:
+            </p>
+            <p
+                class="font-roboto-mono mt-2 text-lg md:text-lg text-gray-300 w-[600px] text-left"
+            >
+                Full‑stack Software Engineering student (last year) passionate
+                about system architecture and building scalable products with
+                last tech; I design clean APIs, craft intuitive UIs, and ship
+                maintainable solutions with testing and CI/CD. Curious by nature
+                and quick to learn, I adapt fast to new stacks and translate
+                business goals into robust, user‑centric software that delivers
+                measurable impact.
+            </p>
+            <div class="flex mt-5 justify-left items-center">
+                <TechnologiesCarousel />
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="w-120 h-120 ml-12 justify-self-center self-center rounded-full overflow-hidden bg-gray-800 flex items-center justify-center shadow-lg mb-8"
+    >
+        <img
+            src="/src/assets/me.png"
+            alt="About me"
+            class="w-full h-full object-cover"
+        />
+    </div>
+</div>
+
+<style>
+    .font-ibrand {
+        font-family: "Ibrand", var(--font-sans);
+        font-weight: 500;
+    }
+
+    .font-sink {
+        font-family: "Sink", var(--font-sans);
+    }
+</style>
