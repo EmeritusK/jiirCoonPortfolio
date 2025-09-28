@@ -1,0 +1,435 @@
+---
+
+---
+
+<section class="min-h-screen px-8 py-16 relative overflow-hidden">
+    <!-- Background Orbs -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute w-96 h-96 bg-gradient-to-r from-[#8b5cf6]/10 to-[#7c3aed]/10 rounded-full blur-3xl top-20 right-10 animate-pulse"></div>
+        <div class="absolute w-64 h-64 bg-gradient-to-r from-[#7c3aed]/10 to-[#5b21b6]/10 rounded-full blur-3xl bottom-32 left-16 animate-pulse" style="animation-delay: 3s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <div class="w-3 h-3 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] rounded-full"></div>
+                <h1 class="font-roboto-mono text-2xl font-bold text-white uppercase tracking-wide">Ready to Collaborate?</h1>
+                <div class="w-3 h-3 bg-gradient-to-r from-[#7c3aed] to-[#5b21b6] rounded-full"></div>
+            </div>
+            <h2 class="font-ibrand text-6xl lg:text-8xl font-bold text-white mb-4">
+                LET'S WORK
+            </h2>
+            <h3 class="font-ibrand text-6xl lg:text-8xl font-bold bg-gradient-to-r from-[#8b5cf6] via-[#7c3aed] to-[#5b21b6] bg-clip-text text-transparent">
+                TOGETHER
+            </h3>
+            <p class="font-roboto-mono text-lg text-gray-300 mt-6 max-w-2xl mx-auto">
+                Whether you need a dedicated team member or a project specialist, 
+                I'm here to bring your vision to life with cutting-edge technology.
+            </p>
+        </div>
+
+        <!-- Contact Type Switch -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-gray-900/50 backdrop-blur-sm border border-[#8b5cf6]/20 rounded-2xl p-2">
+                <div class="flex items-center gap-2">
+                    <button 
+                        id="contractBtn" 
+                        class="contact-switch-btn active px-6 py-3 rounded-xl font-roboto-mono text-sm font-semibold transition-all duration-300 flex items-center gap-2"
+                    >
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1zM4 9v5h12V9H4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Full-Time Contract
+                    </button>
+                    <button 
+                        id="projectBtn" 
+                        class="contact-switch-btn px-6 py-3 rounded-xl font-roboto-mono text-sm font-semibold transition-all duration-300 flex items-center gap-2"
+                    >
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1v-2z" clip-rule="evenodd"></path>
+                        </svg>
+                        Project Work
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg border border-[#8b5cf6]/20 rounded-3xl p-8 lg:p-12">
+                
+                <!-- Form Header with Dynamic Content -->
+                <div id="formHeader" class="text-center mb-8">
+                    <div class="contract-content">
+                        <h4 class="font-ibrand text-2xl font-bold text-white mb-2">Full-Time Collaboration</h4>
+                        <p class="font-roboto-mono text-gray-300 text-sm">Join your team as a dedicated full-stack developer</p>
+                    </div>
+                    <div class="project-content hidden">
+                        <h4 class="font-ibrand text-2xl font-bold text-white mb-2">Project Partnership</h4>
+                        <p class="font-roboto-mono text-gray-300 text-sm">Let's build something amazing together</p>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <!-- Basic Info Row -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="fullName" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                                Full Name *
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullName"
+                                name="fullName"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300"
+                                placeholder="Your full name"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                                Email *
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email"
+                                name="email"
+                                required
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300"
+                                placeholder="you@company.com"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Company/Project Row -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="companyProjectInput" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                                <span class="contract-content">Company</span>
+                                <span class="project-content hidden">Project</span>
+                            </label>
+                            <input 
+                                type="text"
+                                id="companyProjectInput"
+                                name="companyProject"
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300"
+                                placeholder="Your company name"
+                            >
+                        </div>
+                        
+                        <!-- Dynamic Field -->
+                        <div class="form-group">
+                            <div class="contract-content">
+                                <label for="workPreference" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                                    Work Preference
+                                </label>
+                                <select id="workPreference" name="workPreference" class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300">
+                                    <option value="">Select work mode</option>
+                                    <option value="remote">100% Remote</option>
+                                    <option value="hybrid">Hybrid</option>
+                                    <option value="onsite">On-site</option>
+                                </select>
+                            </div>
+                            <div class="project-content hidden">
+                                <label for="estimatedBudget" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                                    Estimated Budget
+                                </label>
+                                <select id="estimatedBudget" name="estimatedBudget" class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300">
+                                    <option value="">Budget range</option>
+                                    <option value="1k-5k">$1,000 - $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k+">$25,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline/Duration -->
+                    <div class="form-group">
+                        <label for="startDate" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                            <span class="contract-content">Desired Start Date</span>
+                            <span class="project-content hidden">Project Timeline</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="contract-content">
+                                <input 
+                                    type="date"
+                                    id="startDate"
+                                    name="startDate"
+                                    class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300"
+                                >
+                            </div>
+                            <div class="project-content hidden grid grid-cols-1 sm:grid-cols-3 gap-4 col-span-3">
+                                <button type="button" class="timeline-btn px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm hover:border-[#8b5cf6] transition-all duration-300" data-timeline="1-2 weeks">
+                                    1-2 weeks
+                                </button>
+                                <button type="button" class="timeline-btn px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm hover:border-[#8b5cf6] transition-all duration-300" data-timeline="1-2 months">
+                                    1-2 months
+                                </button>
+                                <button type="button" class="timeline-btn px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm hover:border-[#8b5cf6] transition-all duration-300" data-timeline="3+ months">
+                                    3+ months
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="messageTextarea" class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-2">
+                            <span class="contract-content">Tell me about the role *</span>
+                            <span class="project-content hidden">Describe your project *</span>
+                        </label>
+                        <textarea 
+                            required
+                            rows="5"
+                            id="messageTextarea"
+                            name="message"
+                            class="w-full px-4 py-3 bg-gray-800/50 border border-[#8b5cf6]/30 rounded-xl text-white font-roboto-mono text-sm focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/20 focus:outline-none transition-all duration-300 resize-none"
+                            placeholder="Describe the responsibilities, required technologies, and what you're looking for in a developer..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Technologies Interest (Project Mode) -->
+                    <div class="project-content hidden">
+                        <fieldset>
+                            <legend class="block font-roboto-mono text-sm font-semibold text-gray-300 mb-4">
+                                Required Technologies
+                            </legend>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="react" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">React</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="angular" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">Angular</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="nodejs" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">Node.js</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="react-native" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">React Native</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="typescript" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">TypeScript</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="postgresql" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">PostgreSQL</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="mongodb" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">MongoDB</span>
+                            </label>
+                            <label class="tech-checkbox flex items-center gap-2 p-3 bg-gray-800/30 rounded-lg cursor-pointer hover:bg-gray-800/50 transition-all duration-300">
+                                <input type="checkbox" name="technologies" value="others" class="sr-only">
+                                <div class="checkbox-custom w-4 h-4 border-2 border-[#8b5cf6]/50 rounded"></div>
+                                <span class="font-roboto-mono text-xs text-gray-300">Others</span>
+                            </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-6">
+                        <button 
+                            type="submit"
+                            class="w-full bg-gradient-to-r from-[#8b5cf6] via-[#7c3aed] to-[#5b21b6] hover:from-[#7c3aed] hover:via-[#6d28d9] hover:to-[#4c1d95] text-white font-roboto-mono font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#8b5cf6]/25 flex items-center justify-center gap-2"
+                        >
+                            <span class="contract-content flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                                </svg>
+                                Send Collaboration Proposal
+                            </span>
+                            <span class="project-content hidden flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Request Quote
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="mt-12 pt-8 border-t border-[#8b5cf6]/20">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 bg-gradient-to-r from-[#8b5cf6]/20 to-[#7c3aed]/20 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-[#8b5cf6]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <p class="font-roboto-mono text-xs text-gray-400">Email</p>
+                            <p class="font-roboto-mono text-sm text-white">jair@portfolio.dev</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 bg-gradient-to-r from-[#7c3aed]/20 to-[#5b21b6]/20 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-[#7c3aed]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="font-roboto-mono text-xs text-gray-400">WhatsApp</p>
+                            <p class="font-roboto-mono text-sm text-white">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="w-12 h-12 bg-gradient-to-r from-[#5b21b6]/20 to-[#8b5cf6]/20 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-[#5b21b6]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="font-roboto-mono text-xs text-gray-400">Response Time</p>
+                            <p class="font-roboto-mono text-sm text-white">24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Contact Type Switch Functionality
+        const contractBtn = document.getElementById('contractBtn');
+        const projectBtn = document.getElementById('projectBtn');
+        const contractContent = document.querySelectorAll('.contract-content');
+        const projectContent = document.querySelectorAll('.project-content');
+        const companyProjectInput = document.getElementById('companyProjectInput');
+        const messageTextarea = document.getElementById('messageTextarea');
+
+        function switchToContract() {
+            if (contractBtn && projectBtn && companyProjectInput && messageTextarea) {
+                contractBtn.classList.add('active');
+                projectBtn.classList.remove('active');
+                
+                contractContent.forEach(el => el.classList.remove('hidden'));
+                projectContent.forEach(el => el.classList.add('hidden'));
+                
+                companyProjectInput.placeholder = 'Your company name';
+                messageTextarea.placeholder = 'Describe the responsibilities, required technologies, and what you\'re looking for in a developer...';
+            }
+        }
+
+        function switchToProject() {
+            if (contractBtn && projectBtn && companyProjectInput && messageTextarea) {
+                projectBtn.classList.add('active');
+                contractBtn.classList.remove('active');
+                
+                projectContent.forEach(el => el.classList.remove('hidden'));
+                contractContent.forEach(el => el.classList.add('hidden'));
+                
+                companyProjectInput.placeholder = 'Your project name';
+                messageTextarea.placeholder = 'Describe your project, objectives, required features, and any important details...';
+            }
+        }
+
+        if (contractBtn && projectBtn) {
+            contractBtn.addEventListener('click', switchToContract);
+            projectBtn.addEventListener('click', switchToProject);
+        }
+
+        // Timeline buttons functionality
+        document.querySelectorAll('.timeline-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.timeline-btn').forEach(function(b) {
+                    b.classList.remove('bg-[#8b5cf6]/20', 'border-[#8b5cf6]');
+                    b.classList.add('bg-gray-800/50', 'border-[#8b5cf6]/30');
+                });
+                
+                this.classList.remove('bg-gray-800/50', 'border-[#8b5cf6]/30');
+                this.classList.add('bg-[#8b5cf6]/20', 'border-[#8b5cf6]');
+            });
+        });
+
+        // Custom checkbox functionality
+        document.querySelectorAll('.tech-checkbox').forEach(function(label) {
+            const checkbox = label.querySelector('input[type="checkbox"]');
+            const customCheckbox = label.querySelector('.checkbox-custom');
+            
+            label.addEventListener('click', function() {
+                if (checkbox && customCheckbox) {
+                    checkbox.checked = !checkbox.checked;
+                    
+                    if (checkbox.checked) {
+                        customCheckbox.classList.add('bg-[#8b5cf6]', 'border-[#8b5cf6]');
+                        customCheckbox.innerHTML = '<svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>';
+                    } else {
+                        customCheckbox.classList.remove('bg-[#8b5cf6]', 'border-[#8b5cf6]');
+                        customCheckbox.innerHTML = '';
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = document.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(function() {
+                        if (submitBtn) {
+                            submitBtn.innerHTML = '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Message Sent!';
+                            setTimeout(function() {
+                                if (submitBtn) {
+                                    submitBtn.innerHTML = originalText;
+                                    submitBtn.disabled = false;
+                                }
+                            }, 2000);
+                        }
+                    }, 1500);
+                }
+            });
+        }
+    });
+</script>
+
+<style>
+    .contact-switch-btn {
+        color: #9ca3af;
+        background: transparent;
+    }
+    
+    .contact-switch-btn.active {
+        color: white;
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    }
+    
+    .contact-switch-btn:hover:not(.active) {
+        color: #d1d5db;
+        background: rgba(139, 92, 246, 0.1);
+    }
+
+    .font-ibrand {
+        font-family: "Ibrand", var(--font-sans);
+        font-weight: 500;
+    }
+
+    .font-roboto-mono {
+        font-family: "Roboto Mono", monospace;
+    }
+</style>
