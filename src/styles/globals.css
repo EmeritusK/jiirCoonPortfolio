@@ -60,6 +60,19 @@ body {
   font-display: swap;
 }
 
+/* Tailwind utilities for custom fonts */
+.font-sink {
+  font-family: 'Sink', system-ui, -apple-system, sans-serif;
+}
+
+.font-ibrand {
+  font-family: 'Ibrand', system-ui, -apple-system, sans-serif;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
 .hero-main-text {
   font-family: 'Ibrand';
   font-size: 48px;
