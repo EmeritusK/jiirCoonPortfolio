@@ -1,47 +1,77 @@
 ---
 import TechnologiesCarousel from "../components/layout/TechnologyCarousel.astro";
+import { Image } from 'astro:assets';
+import me from '../assets/me.png';
 ---
 
-<div class="flex gap-2 relative overflow-visible justify-center">
-    <div class="flex flex-col items-start justify-center my-30">
-        <div class="flex flex-col">
-            <h1
-                class="font-ibrand text-9xl font-bold fake-bold text-white mb-[-15px]"
-            >
-                Here is
-            </h1>
-            <p
-                class="font-roboto-mono text-3xl md:text-3xl text-gray-300 max-w-2xl leading-relaxed"
-            >
-                Something about me:
-            </p>
-            <p
-                class="font-roboto-mono mt-2 text-lg md:text-lg text-gray-300 w-[600px] text-left"
-            >
-                Full‑stack Software Engineering student (last year) passionate
-                about system architecture and building scalable products with
-                last tech; I design clean APIs, craft intuitive UIs, and ship
-                maintainable solutions with testing and CI/CD. Curious by nature
-                and quick to learn, I adapt fast to new stacks and translate
-                business goals into robust, user‑centric software that delivers
-                measurable impact.
-            </p>
-            <div class="flex mt-5 justify-left items-center">
-                <TechnologiesCarousel />
+<section class="min-h-screen relative overflow-hidden flex items-center justify-center px-8 py-16">
+    <div class="max-w-7xl w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="flex flex-col gap-6">
+                <!-- Main Title -->
+                <h1 class="font-ibrand text-7xl md:text-9xl font-bold fake-bold text-white mb-[-15px]">
+                    Here is
+                </h1>
+                
+                <!-- Subtitle -->
+                <div class="flex flex-col">
+                    <p class="font-roboto-mono text-3xl md:text-3xl text-gray-300 leading-relaxed">
+                        Something about me:
+                    </p>
+                    <div class="h-1 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] rounded-full w-32 mt-2"></div>
+                </div>
+                
+                <!-- Description -->
+                <div class="mt-4">
+                    <p class="font-roboto-mono text-lg md:text-lg text-gray-300 max-w-[600px] leading-relaxed">
+                        Full‑stack Software Engineering student (last year) passionate
+                        about <span class="text-[#8b5cf6] font-semibold">system architecture</span> and building scalable products with
+                        cutting-edge tech; I design <span class="text-[#8b5cf6] font-semibold">clean APIs</span>, craft intuitive UIs, and ship
+                        maintainable solutions with testing and CI/CD. Curious by nature
+                        and quick to learn, I adapt fast to new stacks and translate
+                        business goals into <span class="text-[#8b5cf6] font-semibold">robust, user‑centric software</span> that delivers
+                        measurable impact.
+                    </p>
+                </div>
+                
+                <!-- Skills Badge -->
+                <div class="flex items-center gap-4 p-4 bg-[#8b5cf6]/10 border border-[#8b5cf6]/30 rounded-2xl backdrop-blur-sm w-fit">
+                    <div class="text-2xl animate-pulse">🚀</div>
+                    <div class="flex flex-col">
+                        <span class="font-roboto-mono text-sm font-semibold text-[#8b5cf6]">Currently Learning</span>
+                        <span class="font-roboto-mono text-xs text-gray-400">Advanced System Design & Cloud Architecture</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Profile Image -->
+            <div class="flex flex-col items-center">
+                <div class="relative w-96 h-96 mb-8">
+                    <div class="absolute -inset-4 bg-[#8b5cf6]/10 rounded-full blur-2xl"></div>
+                    <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-[#8b5cf6]/20 hover:border-[#8b5cf6]/40 transition-all duration-300 hover:scale-105 bg-gray-800 flex items-center justify-center shadow-2xl">
+                        <Image src={me}
+                            alt="About me"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="w-full max-w-md">
+                    <div class="flex items-center justify-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-[#8b5cf6] rounded-full"></div>
+                        <h3 class="font-roboto-mono text-lg font-semibold text-gray-200">Tech Stack</h3>
+                        <div class="w-2 h-2 bg-[#8b5cf6] rounded-full"></div>
+                    </div>
+                    <div class="p-6 bg-gray-900/50 border border-[#8b5cf6]/20 rounded-2xl backdrop-blur-sm">
+                        <TechnologiesCarousel />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div
-        class="w-120 h-120 ml-12 justify-self-center self-center rounded-full overflow-hidden bg-gray-800 flex items-center justify-center shadow-lg mb-8"
-    >
-        <img
-            src="/src/assets/me.png"
-            alt="About me"
-            class="w-full h-full object-cover"
-        />
-    </div>
-</div>
+</section>
 
 <style>
     .font-ibrand {

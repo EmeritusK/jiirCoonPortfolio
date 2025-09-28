@@ -76,9 +76,5 @@ body {
 .font-roboto-mono {
   font-family: var(--font-roboto-mono);
 }
-/* Example usage override
-html { font-family: 'MyLocalSans', var(--font-sans); }
-code, pre { font-family: 'MyLocalMono', var(--font-mono); }
-*/
 
 
