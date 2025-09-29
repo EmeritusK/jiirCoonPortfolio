@@ -8,7 +8,7 @@ const { svg, label } = Astro.props;
 ---
 
 
-<div class="flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5">
-  <div class="w-12 h-12 mb-2 flex items-center justify-center text-white" set:html={svg}>
+<div class="flex flex-col items-center cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 flex-shrink-0">
+  <div class="w-10 h-10 sm:w-12 sm:h-12 mb-2 flex items-center justify-center text-white" set:html={svg}>
   </div>
 </div>

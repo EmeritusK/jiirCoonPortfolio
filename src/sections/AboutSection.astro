@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import me from '../assets/me.png';
 ---
 
-<section class="min-h-screen relative overflow-hidden flex items-center justify-center px-8 py-16">
+<section id="about" class="min-h-screen relative overflow-hidden flex items-center justify-center px-8 py-16">
     <div class="max-w-7xl w-full relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div class="flex flex-col gap-6">
@@ -47,7 +47,7 @@ import me from '../assets/me.png';
 
             <!-- Profile Image -->
             <div class="flex flex-col items-center">
-                <div class="relative w-96 h-96 mb-8">
+                <div class="relative w-96 h-96 mb-8 ">
                     <div class="absolute -inset-4 bg-[#8b5cf6]/10 rounded-full blur-2xl"></div>
                     <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-[#8b5cf6]/20 hover:border-[#8b5cf6]/40 transition-all duration-300 hover:scale-105 bg-gray-800 flex items-center justify-center shadow-2xl">
                         <Image src={me}
