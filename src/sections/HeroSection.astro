@@ -2,7 +2,7 @@
 
 ---
 
-<section class="min-h-screen relative overflow-hidden flex flex-col px-8 py-16">
+<section class="min-h-screen relative overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
     <!-- Background Orbs -->
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute w-72 h-72 bg-gradient-to-r from-[#8b5cf6]/10 to-[#7c3aed]/10 rounded-full blur-3xl top-10 right-10 animate-pulse"></div>
@@ -22,17 +22,17 @@
 
             <!-- Main Title -->
             <div>
-                <h1 class="font-ibrand text-7xl lg:text-7xl font-bold text-white leading-none">
+                <h1 class="font-ibrand text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight sm:leading-none">
                     <span class="block">Crafting</span>
                     <span class="block bg-gradient-to-r from-[#8b5cf6] via-[#7c3aed] to-[#5b21b6] bg-clip-text text-transparent">Digital</span>
                     <span class="block">Experiences</span>
                 </h1>
-                <div class="h-1 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] rounded-full w-32 mt-3"></div>
+                <div class="h-1 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] rounded-full w-24 sm:w-32 mt-3"></div>
             </div>
 
             <!-- Subtitle -->
             <div class="max-w-lg">
-                <p class="font-roboto-mono text-lg text-gray-300 leading-relaxed">
+                <p class="font-roboto-mono text-base sm:text-lg text-gray-300 leading-relaxed">
                     Full-stack developer turning 
                     <span class="text-[#8b5cf6] font-semibold">complex ideas</span> 
                     into 
@@ -42,40 +42,40 @@
             </div>
 
             <!-- CTA Buttons - Moved up -->
-            <div class="flex gap-4 items-center pt-4">
-                <button class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] text-white rounded-lg font-ibrand font-semibold hover:from-[#7c3aed] hover:to-[#5b21b6] hover:shadow-lg hover:shadow-[#8b5cf6]/30 hover:-translate-y-1 transition-all duration-300">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center pt-4">
+                <button class="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-gradient-to-r from-[#8b5cf6] to-[#7c3aed] text-white rounded-lg font-ibrand font-semibold hover:from-[#7c3aed] hover:to-[#5b21b6] hover:shadow-lg hover:shadow-[#8b5cf6]/30 hover:-translate-y-1 transition-all duration-300">
                     <span>View My Work</span>
                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
                 </button>
-                <button class="px-6 py-3 bg-transparent border-2 border-[#8b5cf6] text-[#8b5cf6] rounded-lg font-ibrand font-semibold hover:bg-[#8b5cf6] hover:text-white hover:-translate-y-1 transition-all duration-300">
+                <button class="px-4 sm:px-6 py-3 bg-transparent border-2 border-[#8b5cf6] text-[#8b5cf6] rounded-lg font-ibrand font-semibold hover:bg-[#8b5cf6] hover:text-white hover:-translate-y-1 transition-all duration-300 text-center">
                     Let's Talk
                 </button>
             </div>
 
             <!-- Stats Row - Compact -->
-            <div class="flex items-center gap-4 p-3 bg-gray-900/30 rounded-lg border border-[#8b5cf6]/10 backdrop-blur-sm w-fit">
-                <div class="flex items-center gap-1">
-                    <span class="font-ibrand text-xl font-bold text-[#8b5cf6]">50+</span>
+            <div class="flex items-center  gap-2 sm:gap-4 p-3 bg-gray-900/30 rounded-lg border border-[#8b5cf6]/10 backdrop-blur-sm w-fit max-w-full overflow-x-auto">
+                <div class="flex items-center gap-1 flex-shrink-0">
+                    <span class="font-ibrand text-lg sm:text-xl font-bold text-[#8b5cf6]">50+</span>
                     <span class="font-roboto-mono text-xs text-gray-400">Projects</span>
                 </div>
-                <div class="w-px h-6 bg-[#8b5cf6]/30"></div>
-                <div class="flex items-center gap-1">
-                    <span class="font-ibrand text-xl font-bold text-[#8b5cf6]">3+</span>
+                <div class="w-px h-6 bg-[#8b5cf6]/30 flex-shrink-0"></div>
+                <div class="flex items-center gap-1 flex-shrink-0">
+                    <span class="font-ibrand text-lg sm:text-xl font-bold text-[#8b5cf6]">3+</span>
                     <span class="font-roboto-mono text-xs text-gray-400">Years</span>
                 </div>
-                <div class="w-px h-6 bg-[#8b5cf6]/30"></div>
-                <div class="flex items-center gap-1">
-                    <span class="font-ibrand text-xl font-bold text-[#8b5cf6]">100%</span>
+                <div class="w-px h-6 bg-[#8b5cf6]/30 flex-shrink-0"></div>
+                <div class="flex items-center gap-1 flex-shrink-0">
+                    <span class="font-ibrand text-lg sm:text-xl font-bold text-[#8b5cf6]">100%</span>
                     <span class="font-roboto-mono text-xs text-gray-400">Happy</span>
                 </div>
             </div>
         </div>
 
         <!-- Right Side - Code Window -->
-        <div class="flex justify-center items-center">
-            <div class="bg-gray-900/90 rounded-xl border border-[#8b5cf6]/30 overflow-hidden w-96 backdrop-blur-sm shadow-2xl">
+        <div class="flex justify-center items-center mt-8 lg:mt-0">
+            <div class="bg-gray-900/90 rounded-xl border border-[#8b5cf6]/30 overflow-hidden w-full max-w-sm sm:max-w-md lg:w-96 backdrop-blur-sm shadow-2xl">
                 <!-- Window Header -->
                 <div class="flex items-center justify-between p-4 bg-gray-800/80 border-b border-[#8b5cf6]/20">
                     <div class="flex gap-2">
